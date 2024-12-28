@@ -1,0 +1,157 @@
+@import url(https://fonts.bunny.net/css?family=raleway:200,300,600,600i);
+
+:root {
+    --primary-color: #9525d6;
+    --secondary-color: #b701ff;
+    --text-color: #2e2e2e;
+    --background-color: #fff;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg-color: #FFC3E2;
+    --header-gradient-start: #ffc3fc;
+    --header-gradient-end: #5a01ff;
+    --header-text-color: #fff;
+    --scrollbar-thumb-color: #5a5a5a;
+    --footer-bg-color: #f1f1f1;
+    --footer-border-color: gray;
+    --footer-text-color: #333;
+}
+
+body {
+    background-size: 10em 15em;
+  background-image:
+    linear-gradient(to right, var(--scrollbar-thumb-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--scrollbar-thumb-color) 1px, transparent 1px);
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+p {
+    font-size: 130%;
+    font-weight: 300;
+}
+
+.underlined {
+    border-bottom: 1px solid gray
+}
+
+.header {
+    padding: 4em 4em 2em 4em;
+    background: var(--header-bg-color);
+    background: radial-gradient(at right top, var(--header-gradient-start), var(--header-gradient-end));
+    margin: -6em -0.5em 0 -0.5em;
+}
+
+.header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    margin-top: 2em;
+}
+
+.header p, .header h1 {
+    color: var(--header-text-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.card-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 10px;
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border-radius: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 10px;
+    padding: 10px calc(10px + 1em) 10px 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 6px 10px var(--shadow-color);
+    position: relative;
+    background-color: var(--background-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.card img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.card h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    word-wrap: break-word;
+}
+
+.card a.learn-more {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid var(--footer-border-color);
+    margin-top: 20px;
+    margin: 4em -0.5em -4em -0.5em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--footer-text-color);
+}

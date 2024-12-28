@@ -1,0 +1,14 @@
+[
+    {
+        "ProjectName": "MadeBy.My.ID",
+        "ProjectIcon": "assets/media/bloom.png",
+        "ProjectSmallDescription": "Let your future bloom.",
+        "ProjectLink": "#---------->YoureGoingNowhere<----------"
+    },
+    {
+        "ProjectName": "YOURPROJECT.MadeBy.My.ID",
+        "ProjectIcon": "assets/media/template.png",
+        "ProjectSmallDescription": "Would you carry the torch?",
+        "ProjectLink": "#---------->WhatDidYouEvenExpect<----------"
+    }
+]
